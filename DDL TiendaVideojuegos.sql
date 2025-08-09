@@ -160,5 +160,70 @@ CREATE TABLE Cliente(
 	Clave VARCHAR(50) NULL
 )
 
+--Crear indices de la tabla CLIENTE
+CREATE INDEX ix_Cliente_Nombre
+	ON Cliente(Nombre)
 
+CREATE UNIQUE INDEX ix_Cliente_Identificacion
+	ON Cliente(IdTipoDocumento, NumeroIdentificacion)
+
+--Crear tabla EMPLEADO
+CREATE TABLE Empleado(
+	Id INT IDENTITY NOT NULL,
+	CONSTRAINT pk_Empleado_Id PRIMARY KEY (Id),
+	Nombre VARCHAR(100) NOT NULL,
+	IdTipoDocumento INT NOT NULL,
+	CONSTRAINT fk_Empleado_IdTipoDocumento FOREIGN KEY (IdTipoDocumento) REFERENCES TipoDocumento(Id),
+	NumeroIdentificacion VARCHAR(20) NOT NULL,
+	Clave VARCHAR(20) NOT NULL
+)
+
+--Crear indices de la tabla EMPLEADO
+CREATE INDEX ix_Empleado_Nombre
+	ON Empleado(Nombre)
+
+CREATE UNIQUE INDEX ix_Empleado_Identificacion
+	ON Empleado(IdTipoDocumento, NumeroIdentificacion)
+
+--Crear tabla ESTADOVENTA
+CREATE TABLE EstadoVenta(
+	Id INT IDENTITY NOT NULL,
+	CONSTRAINT pk_EstadoVenta_Id PRIMARY KEY (Id),
+	Nombre VARCHAR(50) NOT NULL
+)
+
+--Crear indice de la tabla ESTADOVENTA
+CREATE INDEX ix_EstadoVenta_Nombre
+	ON Formato(Nombre)
+
+--Crear tabla VENTA
+CREATE TABLE Venta(
+	Id INT IDENTITY NOT NULL,
+	CONSTRAINT pk_Venta_Id PRIMARY KEY (Id),
+	NumeroFactura INT NOT NULL,
+	Fecha DATE NOT NULL,
+	FechaEntrega DATE NULL,
+	IdCliente INT NOT NULL,
+	CONSTRAINT fk_Venta_IdCliente FOREIGN KEY (IdCliente) REFERENCES Cliente(Id),
+	IdEmpleado INT NOT NULL,
+	CONSTRAINT fk_Venta_IdEmpleado FOREIGN KEY (IdEmpleado) REFERENCES Empleado(Id),
+	IdEstado INT NOT NULL,
+	CONSTRAINT fk_Venta_IdEstado FOREIGN KEY (IdEstado) REFERENCES EstadoVenta(Id)
+)
+
+--Crear indice de la tabla VENTA
+CREATE UNIQUE INDEX ix_Venta_NumeroFactura
+	ON Venta(NumeroFactura)
+
+--Crear tabla VENTADETALLE
+CREATE TABLE VentaDetalle(
+	IdVenta INT NOT NULL,
+	CONSTRAINT fk_VentaDetalle_IdVenta FOREIGN KEY (IdVenta) REFERENCES Venta(Id),
+	IdTitulo INT NOT NULL,
+	CONSTRAINT fk_VentaDetalle_IdTitulo FOREIGN KEY (IdTitulo) REFERENCES Titulo(Id),
+	CONSTRAINT pk_VentaDetalle PRIMARY KEY (IdVenta, IdTitulo),
+	Cantidad INT NOT NULL,
+	Precio DECIMAL(9,2) NOT NULL,
+	Descuento DECIMAL(9,2) NOT NULL
+)
 

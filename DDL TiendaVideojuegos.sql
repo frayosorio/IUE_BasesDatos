@@ -12,8 +12,7 @@ CREATE TABLE Pais(
 	CodigoAlfa VARCHAR(5) NOT NULL
 )
 --Agregar campo INDICATIVO a la tabla  PAIS
-ALTER TABLE Pais
-	ADD Indicativo INT 
+ALTER TABLE Pais ADD Indicativo INT 
 
 --Agregar clave primaria de la tabla PAIS
 ALTER TABLE Pais

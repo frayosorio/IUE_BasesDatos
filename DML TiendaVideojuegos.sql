@@ -1,5 +1,5 @@
 --Ir a la base de datos
-USE  TiendaVideojuegos
+USE  TiendaVideojuegos606
 
 --Instrucciones para agregar los tipos de documento
 SET IDENTITY_INSERT TipoDocumento ON

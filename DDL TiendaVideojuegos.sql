@@ -1,9 +1,9 @@
 --Crear la base de datos
-CREATE DATABASE TiendaVideojuegos
+CREATE DATABASE TiendaVideojuegos606
 GO
 
 --Ir a la base de datos
-USE  TiendaVideojuegos
+USE  TiendaVideojuegos606
 
 --Crear la tabla PAIS
 CREATE TABLE Pais(
@@ -15,7 +15,7 @@ CREATE TABLE Pais(
 ALTER TABLE Pais
 	ADD Indicativo INT 
 
---Agregar clave primaria de ka tabla PAIS
+--Agregar clave primaria de la tabla PAIS
 ALTER TABLE Pais
 	ADD CONSTRAINT pk_Pais_Id PRIMARY KEY(Id)
 
@@ -46,6 +46,8 @@ CREATE TABLE Categoria(
 	Nombre VARCHAR(50) NOT NULL
 )
 
+ALTER TABLE Categoria ADD Descripcion VARCHAR(200)
+
 --Crear indice de la tabla CATEGORIA
 CREATE UNIQUE INDEX ix_Categoria_Nombre
 	ON Categoria(Nombre)
@@ -56,6 +58,8 @@ CREATE TABLE Formato(
 	CONSTRAINT pk_Formato_Id PRIMARY KEY (Id),
 	Nombre VARCHAR(50) NOT NULL
 )
+
+ALTER TABLE Formato ADD Descripcion VARCHAR(200)
 
 --Crear indice de la tabla FORMATO
 CREATE UNIQUE INDEX ix_Formato_Nombre
@@ -134,7 +138,7 @@ CREATE TABLE TituloFormato(
 CREATE TABLE TipoDocumento(
 	Id INT IDENTITY NOT NULL,
 	CONSTRAINT pk_TipoDocumento_Id PRIMARY KEY (Id),
-	Nombre VARCHAR(50) NOT NULL,
+	Nombre VARCHAR(100) NOT NULL,
 	Sigla VARCHAR(5) NOT NULL
 )
 

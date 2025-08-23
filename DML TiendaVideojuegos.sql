@@ -39,6 +39,7 @@ INSERT INTO Pais (Id, Nombre, CodigoAlfa, Indicativo) VALUES(19,'URUGUAY', 'UY',
 INSERT INTO Pais (Id, Nombre, CodigoAlfa, Indicativo) VALUES(20,'VENEZUELA', 'VE', 58);
 INSERT INTO Pais (Id, Nombre, CodigoAlfa, Indicativo) VALUES(21,'ESPAÑA', 'ES', 34);
 INSERT INTO Pais (Id, Nombre, CodigoAlfa, Indicativo) VALUES(22,'JAPÓN', 'JP', 81);
+INSERT INTO Pais (Id, Nombre, CodigoAlfa, Indicativo) VALUES(23,'FRANCIA', 'FR', 33);
 SET IDENTITY_INSERT Pais OFF
 
 --Instrucciones para agregar las CIUDADES
@@ -114,10 +115,26 @@ INSERT INTO Formato(Nombre, Descripcion) VALUES('Cassette de cinta', 'Usado en m
 --Instrucciones para agregar DESARROLLADORES
 SET IDENTITY_INSERT Desarrollador ON
 INSERT INTO Desarrollador(Id, Nombre, IdPais) VALUES(1, 'Capcom Co. Ltd.', 22)
+
+INSERT INTO Desarrollador(Id, Nombre, IdPais) 
+	VALUES(2, 'Nintendo Co., Ltd.', 22),
+		(3, 'Konami Digital Entertainment', 22),
+		(4, 'Square Enix Holdings Co., Ltd.', 22),
+		(5, 'Sega Corporation', 22),
+		(6, 'Bandai Namco Entertainment Inc.', 22),
+		(7, 'FromSoftware, Inc.', 22),
+		(8, 'Rockstar Games', 11),
+		(9, 'Electronic Arts (EA)', 11),
+		(10, 'Blizzard Entertainment', 11),
+		(11, 'Ubisoft Entertainment', 23)
+
 SET IDENTITY_INSERT Desarrollador OFF
 
 --Instrucciones para agregar TITULOS DE VIDEOJUEGOS
-INSERT INTO Titulo(Nombre, Año, Version, PrecioActual, IdDesarrollador) VALUES('Mega Man', 1987, '1', 40000, 1)
+INSERT INTO Titulo(Nombre, Año, Version, PrecioActual, IdDesarrollador) 
+	VALUES('Mega Man', 1987, '1', 40000, 1)
+INSERT INTO Titulo(Nombre, Año, Version, PrecioActual, IdDesarrollador) 
+	VALUES('Super Mario Bros.', 1985, '1', 40000, 2)
 
 --Instrucciones para agregar CATEGORIA de los TITULOS DE VIDEOJUEGOS
 INSERT INTO TituloCategoria(IdTitulo, IdCategoria) VALUES(2, 1)

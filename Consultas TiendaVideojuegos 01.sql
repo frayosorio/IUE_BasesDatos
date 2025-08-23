@@ -8,6 +8,7 @@ SELECT * FROM Pais
 SELECT * 
 	FROM Ciudad
 		JOIN Pais ON Ciudad.IdPais=Pais.Id
+	WHERE Ciudad.Nombre LIKE '%do'
 
 --Listar los registros de la tabla PLATAFORMA
 SELECT * FROM Plataforma
@@ -20,7 +21,10 @@ SELECT * FROM Categoria
 SELECT * FROM Formato
 
 --Listar los registros de la tabla DESARROLLADOR
-SELECT * FROM Desarrollador
+SELECT D.*, P.Nombre
+	FROM Desarrollador D
+		JOIN Pais P ON D.IdPais = P.Id
+	WHERE P.Nombre = 'JAPÓN'
 
 --Listar los registros de la tabla TITULO
 SELECT * FROM Titulo

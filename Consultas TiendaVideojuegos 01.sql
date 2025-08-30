@@ -31,3 +31,40 @@ SELECT * FROM Titulo
 	JOIN Desarrollador ON Titulo.IdDesarrollador = Desarrollador.Id
 	JOIN TituloCategoria ON Titulo.Id = TituloCategoria.IdTitulo
 	JOIN Categoria ON TituloCategoria.IdCategoria = Categoria.Id
+
+
+--Consultar la cantidad de registros de la tabla PAIS
+SELECT COUNT(*)
+	FROM Pais
+
+--Contar cuantas regiones hay por pais
+SELECT P.Nombre, COUNT(*)
+	FROM Pais P
+		JOIN Region R ON P.Id=R.IdPais
+	GROUP BY P.Nombre
+
+--Averiguar que ciudades tienen 5 clientes o mas
+SELECT C.Nombre, COUNT(*) TotalClientes
+	FROM Ciudad C
+		JOIN Cliente CL ON C.Id=CL.IdCiudad
+	GROUP BY C.Nombre
+	HAVING COUNT(*) >= 5
+
+--Cuantos municipios hay por cada departamento de Colombia
+SELECT R.Nombre, COUNT(*)
+	FROM Pais P
+		JOIN Region R ON P.Id=R.IdPais
+		JOIN Ciudad C ON R.Id=C.IdRegion
+	WHERE P.Nombre='Colombia'
+	GROUP BY R.Nombre
+
+--Que departamentos DE cOLOMBIA tinen mas de 100 municipios
+SELECT R.Nombre, COUNT(*)
+	FROM Pais P
+		JOIN Region R ON P.Id=R.IdPais
+		JOIN Ciudad C ON R.Id=C.IdRegion
+	WHERE P.Nombre='Colombia'
+	GROUP BY R.Nombre
+	HAVING COUNT(*)>=100
+
+

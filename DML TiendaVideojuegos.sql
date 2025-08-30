@@ -302,6 +302,34 @@ INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(73, 'Tolima ', 'TOL', 170)
 INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(76, 'Valle del Cauca ', 'VAC', 170);
 INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(97, 'Vaupés ', 'VAU', 170);
 INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(99, 'Vichada ', 'VID', 170);
+
+INSERT INTO Region (Id, Nombre, Codigo, IdPais) VALUES(124,'Acre','ACR',76);
+INSERT INTO Region (Id, Nombre, Codigo, IdPais) VALUES(125,'Alagoas','ALA',76);
+INSERT INTO Region (Id, Nombre, Codigo, IdPais) VALUES(126,'Amapa','AMA',76);
+INSERT INTO Region (Id, Nombre, Codigo, IdPais) VALUES(127,'Amazonas','AMA',76);
+INSERT INTO Region (Id, Nombre, Codigo, IdPais) VALUES(128,'Bahia','BAH',76);
+INSERT INTO Region (Id, Nombre, Codigo, IdPais) VALUES(129,'Ceara','CEA',76);
+INSERT INTO Region (Id, Nombre, Codigo, IdPais) VALUES(130,'Distrito Federal','DIS',76);
+INSERT INTO Region (Id, Nombre, Codigo, IdPais) VALUES(131,'Espirito Santo','ESP',76);
+INSERT INTO Region (Id, Nombre, Codigo, IdPais) VALUES(132,'Goias','GOI',76);
+INSERT INTO Region (Id, Nombre, Codigo, IdPais) VALUES(133,'Maranhão','MAR',76);
+INSERT INTO Region (Id, Nombre, Codigo, IdPais) VALUES(134,'Mato Grosso','MAT',76);
+INSERT INTO Region (Id, Nombre, Codigo, IdPais) VALUES(135,'Mato Grosso do Sul','MAT',76);
+INSERT INTO Region (Id, Nombre, Codigo, IdPais) VALUES(136,'Minas Gerais','MIN',76);
+INSERT INTO Region (Id, Nombre, Codigo, IdPais) VALUES(137,'Para','PAR',76);
+INSERT INTO Region (Id, Nombre, Codigo, IdPais) VALUES(138,'Paraiba','PAR',76);
+INSERT INTO Region (Id, Nombre, Codigo, IdPais) VALUES(139,'Parana','PAR',76);
+INSERT INTO Region (Id, Nombre, Codigo, IdPais) VALUES(140,'Pernambuco','PER',76);
+INSERT INTO Region (Id, Nombre, Codigo, IdPais) VALUES(141,'Piaui','PIA',76);
+INSERT INTO Region (Id, Nombre, Codigo, IdPais) VALUES(142,'Rio de Janeiro','RIO',76);
+INSERT INTO Region (Id, Nombre, Codigo, IdPais) VALUES(143,'Rio Grande do Norte','RIO',76);
+INSERT INTO Region (Id, Nombre, Codigo, IdPais) VALUES(144,'Rio Grande do Sul','RIO',76);
+INSERT INTO Region (Id, Nombre, Codigo, IdPais) VALUES(145,'Rondonia','RON',76);
+INSERT INTO Region (Id, Nombre, Codigo, IdPais) VALUES(146,'Roraima','ROR',76);
+INSERT INTO Region (Id, Nombre, Codigo, IdPais) VALUES(147,'Santa Catarina','SAN',76);
+INSERT INTO Region (Id, Nombre, Codigo, IdPais) VALUES(148,'Sao Paulo','SAO',76);
+INSERT INTO Region (Id, Nombre, Codigo, IdPais) VALUES(149,'Sergipe','SER',76);
+INSERT INTO Region (Id, Nombre, Codigo, IdPais) VALUES(150,'Tocantins','TOC',76);
 SET IDENTITY_INSERT Region OFF
 
 --Instrucciones para agregar las CIUDADES
@@ -1486,19 +1514,19 @@ INSERT INTO Formato(Nombre, Descripcion) VALUES('Cassette de cinta', 'Usado en m
 
 --Instrucciones para agregar DESARROLLADORES
 SET IDENTITY_INSERT Desarrollador ON
-INSERT INTO Desarrollador(Id, Nombre, IdPais) VALUES(1, 'Capcom Co. Ltd.', 22)
+INSERT INTO Desarrollador(Id, Nombre, IdPais) VALUES(1, 'Capcom Co. Ltd.', 392)
 
 INSERT INTO Desarrollador(Id, Nombre, IdPais) 
-	VALUES(2, 'Nintendo Co., Ltd.', 22),
-		(3, 'Konami Digital Entertainment', 22),
-		(4, 'Square Enix Holdings Co., Ltd.', 22),
-		(5, 'Sega Corporation', 22),
-		(6, 'Bandai Namco Entertainment Inc.', 22),
-		(7, 'FromSoftware, Inc.', 22),
-		(8, 'Rockstar Games', 11),
-		(9, 'Electronic Arts (EA)', 11),
-		(10, 'Blizzard Entertainment', 11),
-		(11, 'Ubisoft Entertainment', 23)
+	VALUES(2, 'Nintendo Co., Ltd.', 392),
+		(3, 'Konami Digital Entertainment', 392),
+		(4, 'Square Enix Holdings Co., Ltd.', 392),
+		(5, 'Sega Corporation', 392),
+		(6, 'Bandai Namco Entertainment Inc.', 392),
+		(7, 'FromSoftware, Inc.', 392),
+		(8, 'Rockstar Games', 840),
+		(9, 'Electronic Arts (EA)', 840),
+		(10, 'Blizzard Entertainment', 840),
+		(11, 'Ubisoft Entertainment', 250)
 
 SET IDENTITY_INSERT Desarrollador OFF
 

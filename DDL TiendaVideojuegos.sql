@@ -77,18 +77,32 @@ CREATE TABLE Desarrollador(
 CREATE UNIQUE INDEX ix_Desarrollador_Nombre
 	ON Desarrollador(Nombre)
 
+--Crear tabla REGION
+CREATE TABLE Region(
+	Id INT IDENTITY NOT NULL,
+	CONSTRAINT pk_Region_Id PRIMARY KEY (Id),
+	Nombre VARCHAR(100) NOT NULL,
+	IdPais INT NOT NULL,
+	Codigo VARCHAR(5) NOT NULL,
+	CONSTRAINT fk_Region_IdPais FOREIGN KEY (IdPais) REFERENCES Pais(Id)
+)
+
+--Crear indice de la tabla REGION
+CREATE UNIQUE INDEX ix_Region_Nombre
+	ON Region(IdPais, Nombre)
+
 --Crear tabla CIUDAD
 CREATE TABLE Ciudad(
 	Id INT IDENTITY NOT NULL,
 	CONSTRAINT pk_Ciudad_Id PRIMARY KEY (Id),
 	Nombre VARCHAR(100) NOT NULL,
-	IdPais INT NOT NULL,
-	CONSTRAINT fk_Ciudad_IdPais FOREIGN KEY (IdPais) REFERENCES Pais(Id)
+	IdRegion INT NOT NULL,
+	CONSTRAINT fk_Ciudad_IdRegion FOREIGN KEY (IdRegion) REFERENCES Region(Id)
 )
 
 --Crear indice de la tabla CIUDAD
 CREATE UNIQUE INDEX ix_Ciudad_Nombre
-	ON Ciudad(IdPais, Nombre)
+	ON Ciudad(IdRegion, Nombre)
 
 --Crear tabla TITULO
 CREATE TABLE Titulo(

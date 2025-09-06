@@ -50,15 +50,7 @@ SELECT C.Nombre, COUNT(*) TotalClientes
 	GROUP BY C.Nombre
 	HAVING COUNT(*) >= 5
 
---Cuantos municipios hay por cada departamento de Colombia
-SELECT R.Nombre, COUNT(*)
-	FROM Pais P
-		JOIN Region R ON P.Id=R.IdPais
-		JOIN Ciudad C ON R.Id=C.IdRegion
-	WHERE P.Nombre='Colombia'
-	GROUP BY R.Nombre
-
---Que departamentos DE cOLOMBIA tinen mas de 100 municipios
+--Que departamentos de COLOMBIA tinen mas de 100 municipios
 SELECT R.Nombre, COUNT(*)
 	FROM Pais P
 		JOIN Region R ON P.Id=R.IdPais
@@ -67,4 +59,37 @@ SELECT R.Nombre, COUNT(*)
 	GROUP BY R.Nombre
 	HAVING COUNT(*)>=100
 
+--Cuantas ventas hay por cada estado durante ENERO
+SELECT E.Nombre Estado, COUNT(*)
+	FROM EstadoVenta E
+		JOIN Venta V ON V.IdEstado=E.Id
+	WHERE MONTH(V.Fecha) = 1
+	GROUP BY E.Nombre
+
+--Cuantas ventas hay por cada estado durante ultima quincena de FEBRERO
+SELECT E.Nombre Estado, COUNT(*)
+	FROM EstadoVenta E
+		JOIN Venta V ON V.IdEstado=E.Id
+	WHERE V.Fecha BETWEEN '2025-02-15' AND '2025-02-28'
+	GROUP BY E.Nombre
+
+--Cual es el cliente con más ventas
+SELECT TOP 1 T.Sigla+' '+C.NumeroIdentificacion Identificacion, C.Nombre,
+	COUNT(*) TotalVentas
+	FROM Cliente C
+		JOIN Venta V ON C.Id=V.IdCliente
+		JOIN TipoDocumento T ON C.IdTipoDocumento=T.Id
+	GROUP BY T.Sigla+' '+C.NumeroIdentificacion, C.Nombre
+	ORDER BY 3 DESC
+
+SELECT T.Sigla+' '+C.NumeroIdentificacion Identificacion, C.Nombre,
+	COUNT(*) TotalVentas
+	FROM Cliente C
+		JOIN Venta V ON C.Id=V.IdCliente
+		JOIN TipoDocumento T ON C.IdTipoDocumento=T.Id
+	GROUP BY T.Sigla+' '+C.NumeroIdentificacion, C.Nombre
+	HAVING COUNT(*) = (SELECT TOP 1 COUNT(*)
+						FROM Venta
+						GROUP BY IdCliente
+						ORDER BY 1 DESC)
 

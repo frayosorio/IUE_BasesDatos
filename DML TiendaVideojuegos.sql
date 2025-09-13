@@ -1528,13 +1528,30 @@ INSERT INTO Desarrollador(Id, Nombre, IdPais)
 		(10, 'Blizzard Entertainment', 840),
 		(11, 'Ubisoft Entertainment', 250)
 
+INSERT INTO Desarrollador(Id, Nombre, IdPais) 
+	VALUES(12, 'Atlus', 392),
+		(14, 'Valve Corporation', 840),
+		(15, 'Nintendo EPD', 392),
+		(16, 'Naughty Dog', 840),
+		(17, 'Playground Games', 250);
+
 SET IDENTITY_INSERT Desarrollador OFF
 
 --Instrucciones para agregar TITULOS DE VIDEOJUEGOS
-INSERT INTO Titulo(Nombre, Año, Version, PrecioActual, IdDesarrollador) 
-	VALUES('Mega Man', 1987, '1', 40000, 1)
-INSERT INTO Titulo(Nombre, Año, Version, PrecioActual, IdDesarrollador) 
-	VALUES('Super Mario Bros.', 1985, '1', 40000, 2)
+SET IDENTITY_INSERT Titulo ON
+INSERT INTO Titulo(Id, Nombre, Año, Version, PrecioActual, IdDesarrollador) VALUES(1, 'Mega Man', 1987, '1', 40000, 1)
+INSERT INTO Titulo(Id, Nombre, Año, Version, PrecioActual, IdDesarrollador) VALUES(2, 'Super Mario Bros.', 1985, '1', 40000, 2)
+INSERT INTO Titulo(Id, Nombre, Año, Version, PrecioActual, IdDesarrollador) VALUES(3, 'Persona 5: Royal', 2019, '1', 20000, 12);
+INSERT INTO Titulo(Id, Nombre, Año, Version, PrecioActual, IdDesarrollador) VALUES(4, 'Red Dead Redemption 2', 2018, '1', 20000, 8);
+INSERT INTO Titulo(Id, Nombre, Año, Version, PrecioActual, IdDesarrollador) VALUES(5, 'Half-Life: Alyx', 2020, '1', 15000, 14);
+INSERT INTO Titulo(Id, Nombre, Año, Version, PrecioActual, IdDesarrollador) VALUES(6, 'The Legend of Zelda: Breath of the Wild', 2017, '1', 20000, 15);
+INSERT INTO Titulo(Id, Nombre, Año, Version, PrecioActual, IdDesarrollador) VALUES(7, 'Super Mario Odyssey', 2017, '1', 20000, 15);
+INSERT INTO Titulo(Id, Nombre, Año, Version, PrecioActual, IdDesarrollador) VALUES(8, 'Super Smash Bros. Ultimate', 2018, '1', 20000, 15);
+INSERT INTO Titulo(Id, Nombre, Año, Version, PrecioActual, IdDesarrollador) VALUES(9, 'The Legend of Zelda: Ocarina of Time 3D', 2011, '1', 10000, 15);
+INSERT INTO Titulo(Id, Nombre, Año, Version, PrecioActual, IdDesarrollador) VALUES(10, 'Forza Horizon 4', 2018, '1', 15000, 17);
+INSERT INTO Titulo(Id, Nombre, Año, Version, PrecioActual, IdDesarrollador) VALUES(11, 'Persona 4 Golden', 2013, '1', 15000, 12);
+INSERT INTO Titulo(Id, Nombre, Año, Version, PrecioActual, IdDesarrollador) VALUES(12, 'The Last of Us Remasterizado', 2014, '1', 15000, 16);
+SET IDENTITY_INSERT Titulo OFF
 
 --Instrucciones para agregar CATEGORIA de los TITULOS DE VIDEOJUEGOS
 INSERT INTO TituloCategoria(IdTitulo, IdCategoria) VALUES(2, 1)

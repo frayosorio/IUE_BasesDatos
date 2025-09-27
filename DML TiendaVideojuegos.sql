@@ -1,10 +1,10 @@
 --Ir a la base de datos
 USE  TiendaVideojuegos606
 
---Instrucciones para agregar los TIPOS DE DOCUMENTO
+
 SET IDENTITY_INSERT TipoDocumento ON
-INSERT INTO TipoDocumento(Id, Nombre, Sigla) VALUES(11, 'Registro civil', 'RC');
-INSERT INTO TipoDocumento(Id, Nombre, Sigla) VALUES(12, 'Tarjeta de identidad', 'TI');
+INSERT INTO TipoDocumento(Id, Nombre, Sigla) VALUES(11, 'Registro Civil', 'RC')
+INSERT INTO TipoDocumento(Id, Nombre, Sigla) VALUES(12, 'Tarjeta de identidad', 'TI')
 INSERT INTO TipoDocumento(Id, Nombre, Sigla) VALUES(13, 'Cédula de ciudadanía', 'CC');
 INSERT INTO TipoDocumento(Id, Nombre, Sigla) VALUES(21, 'Tarjeta de extranjería', 'TE');
 INSERT INTO TipoDocumento(Id, Nombre, Sigla) VALUES(22, 'Cédula de extranjería', 'CE');
@@ -12,10 +12,8 @@ INSERT INTO TipoDocumento(Id, Nombre, Sigla) VALUES(31, 'Número de Identificació
 INSERT INTO TipoDocumento(Id, Nombre, Sigla) VALUES(41, 'Pasaporte', 'PS');
 INSERT INTO TipoDocumento(Id, Nombre, Sigla) VALUES(42, 'Documento de Identificación Extranjero', 'NIE');
 INSERT INTO TipoDocumento(Id, Nombre, Sigla) VALUES(50, 'Número de Identificación Tributaria Otro País', 'NITE');
-INSERT INTO TipoDocumento(Id, Nombre, Sigla) VALUES(91, 'Número Unico de Identificación Personal (Adquiriente)', 'NIUP');
 SET IDENTITY_INSERT TipoDocumento OFF
 
---Instrucciones para agregar los PAISES
 SET IDENTITY_INSERT Pais ON
 INSERT INTO Pais(Id, Nombre, CodigoAlfa, Indicativo) VALUES(004, 'AFGANISTÁN', 'AF', '93');
 INSERT INTO Pais(Id, Nombre, CodigoAlfa, Indicativo) VALUES(248, 'ÅLAND', 'AX', '358');
@@ -302,37 +300,8 @@ INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(73, 'Tolima ', 'TOL', 170)
 INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(76, 'Valle del Cauca ', 'VAC', 170);
 INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(97, 'Vaupés ', 'VAU', 170);
 INSERT INTO Region(Id, Nombre, Codigo, IdPais) VALUES(99, 'Vichada ', 'VID', 170);
-
-INSERT INTO Region (Id, Nombre, Codigo, IdPais) VALUES(124,'Acre','ACR',76);
-INSERT INTO Region (Id, Nombre, Codigo, IdPais) VALUES(125,'Alagoas','ALA',76);
-INSERT INTO Region (Id, Nombre, Codigo, IdPais) VALUES(126,'Amapa','AMA',76);
-INSERT INTO Region (Id, Nombre, Codigo, IdPais) VALUES(127,'Amazonas','AMA',76);
-INSERT INTO Region (Id, Nombre, Codigo, IdPais) VALUES(128,'Bahia','BAH',76);
-INSERT INTO Region (Id, Nombre, Codigo, IdPais) VALUES(129,'Ceara','CEA',76);
-INSERT INTO Region (Id, Nombre, Codigo, IdPais) VALUES(130,'Distrito Federal','DIS',76);
-INSERT INTO Region (Id, Nombre, Codigo, IdPais) VALUES(131,'Espirito Santo','ESP',76);
-INSERT INTO Region (Id, Nombre, Codigo, IdPais) VALUES(132,'Goias','GOI',76);
-INSERT INTO Region (Id, Nombre, Codigo, IdPais) VALUES(133,'Maranhão','MAR',76);
-INSERT INTO Region (Id, Nombre, Codigo, IdPais) VALUES(134,'Mato Grosso','MAT',76);
-INSERT INTO Region (Id, Nombre, Codigo, IdPais) VALUES(135,'Mato Grosso do Sul','MAT',76);
-INSERT INTO Region (Id, Nombre, Codigo, IdPais) VALUES(136,'Minas Gerais','MIN',76);
-INSERT INTO Region (Id, Nombre, Codigo, IdPais) VALUES(137,'Para','PAR',76);
-INSERT INTO Region (Id, Nombre, Codigo, IdPais) VALUES(138,'Paraiba','PAR',76);
-INSERT INTO Region (Id, Nombre, Codigo, IdPais) VALUES(139,'Parana','PAR',76);
-INSERT INTO Region (Id, Nombre, Codigo, IdPais) VALUES(140,'Pernambuco','PER',76);
-INSERT INTO Region (Id, Nombre, Codigo, IdPais) VALUES(141,'Piaui','PIA',76);
-INSERT INTO Region (Id, Nombre, Codigo, IdPais) VALUES(142,'Rio de Janeiro','RIO',76);
-INSERT INTO Region (Id, Nombre, Codigo, IdPais) VALUES(143,'Rio Grande do Norte','RIO',76);
-INSERT INTO Region (Id, Nombre, Codigo, IdPais) VALUES(144,'Rio Grande do Sul','RIO',76);
-INSERT INTO Region (Id, Nombre, Codigo, IdPais) VALUES(145,'Rondonia','RON',76);
-INSERT INTO Region (Id, Nombre, Codigo, IdPais) VALUES(146,'Roraima','ROR',76);
-INSERT INTO Region (Id, Nombre, Codigo, IdPais) VALUES(147,'Santa Catarina','SAN',76);
-INSERT INTO Region (Id, Nombre, Codigo, IdPais) VALUES(148,'Sao Paulo','SAO',76);
-INSERT INTO Region (Id, Nombre, Codigo, IdPais) VALUES(149,'Sergipe','SER',76);
-INSERT INTO Region (Id, Nombre, Codigo, IdPais) VALUES(150,'Tocantins','TOC',76);
 SET IDENTITY_INSERT Region OFF
 
---Instrucciones para agregar las CIUDADES
 SET IDENTITY_INSERT Ciudad ON
 INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(05001, 'MEDELLÍN', 05);
 INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(05002, 'ABEJORRAL', 05);
@@ -1458,7 +1427,6 @@ INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(99624, 'SANTA ROSALÍA', 99);
 INSERT INTO Ciudad(Id, Nombre, IdRegion) VALUES(99773, 'CUMARIBO', 99);
 SET IDENTITY_INSERT Ciudad OFF
 
---Instrucciones para agregar las PLATAFORMAS
 INSERT INTO Plataforma(Nombre, Portable, Año) VALUES('Atari 2600', 0, 1977)
 INSERT INTO Plataforma(Nombre, Portable, Año) VALUES('Nintendo Entertainment System (NES)', 0, 1983)
 INSERT INTO Plataforma(Nombre, Portable, Año) VALUES('Sega Master System', 0, 1985)
@@ -1479,7 +1447,6 @@ INSERT INTO Plataforma(Nombre, Portable, Año) VALUES('PlayStation Portable (PSP)
 INSERT INTO Plataforma(Nombre, Portable, Año) VALUES('PlayStation Vita', 1, 2011)
 INSERT INTO Plataforma(Nombre, Portable, Año) VALUES('Xbox One', 0, 2013)
 
---Instrucciones para agregar las CATEGORIAS
 INSERT INTO Categoria(Nombre, Descripcion) VALUES('Acción', 'Juegos con ritmo rápido que requieren reflejos y coordinación (ej. Call of Duty, Doom).')
 INSERT INTO Categoria(Nombre, Descripcion) VALUES('Aventura', 'Basados en exploración y narrativa, con resolución de acertijos (ej. The Legend of Zelda).')
 INSERT INTO Categoria(Nombre, Descripcion) VALUES('Plataformas', 'El jugador salta y se desplaza por escenarios (ej. Super Mario Bros, Celeste).')
@@ -1499,7 +1466,6 @@ INSERT INTO Categoria(Nombre, Descripcion) VALUES('Battle Royale', 'Muchos jugad
 INSERT INTO Categoria(Nombre, Descripcion) VALUES('Musical / Ritmo', 'Seguir patrones musicales (ej. Guitar Hero, Just Dance).')
 INSERT INTO Categoria(Nombre, Descripcion) VALUES('Party Games', 'Minijuegos para jugar en grupo (ej. Mario Party, Overcooked).)')
 
---Instrucciones para agregar los FORMATOS
 INSERT INTO Formato(Nombre, Descripcion) VALUES('Cartucho', 'Medio sólido con chip de memoria, usado sobre todo en consolas clásicas y portátiles.')
 INSERT INTO Formato(Nombre, Descripcion) VALUES('CD-ROM', 'Disco óptico con hasta 700 MB de capacidad.')
 INSERT INTO Formato(Nombre, Descripcion) VALUES('DVD-ROM', 'Disco óptico con hasta 4.7 GB (o 8.5 GB en doble capa).')
@@ -1514,10 +1480,9 @@ INSERT INTO Formato(Nombre, Descripcion) VALUES('Cassette de cinta', 'Usado en m
 
 --Instrucciones para agregar DESARROLLADORES
 SET IDENTITY_INSERT Desarrollador ON
-INSERT INTO Desarrollador(Id, Nombre, IdPais) VALUES(1, 'Capcom Co. Ltd.', 392)
-
-INSERT INTO Desarrollador(Id, Nombre, IdPais) 
-	VALUES(2, 'Nintendo Co., Ltd.', 392),
+INSERT INTO Desarrollador(Id, Nombre, IdPais)
+	VALUES(1, 'Capcom Co. Ltd.', 392),
+		(2, 'Nintendo Co., Ltd.', 392),
 		(3, 'Konami Digital Entertainment', 392),
 		(4, 'Square Enix Holdings Co., Ltd.', 392),
 		(5, 'Sega Corporation', 392),
@@ -1526,15 +1491,14 @@ INSERT INTO Desarrollador(Id, Nombre, IdPais)
 		(8, 'Rockstar Games', 840),
 		(9, 'Electronic Arts (EA)', 840),
 		(10, 'Blizzard Entertainment', 840),
-		(11, 'Ubisoft Entertainment', 250)
+		(11, 'Ubisoft Entertainment', 250),
+		(12, 'Atlus', 392)
 
 INSERT INTO Desarrollador(Id, Nombre, IdPais) 
-	VALUES(12, 'Atlus', 392),
-		(14, 'Valve Corporation', 840),
-		(15, 'Nintendo EPD', 392),
-		(16, 'Naughty Dog', 840),
-		(17, 'Playground Games', 250);
-
+	VALUES(13, 'Valve Corporation', 840),
+		(14, 'Nintendo EPD', 392),
+		(15, 'Naughty Dog', 840),
+		(16, 'Playground Games', 250);
 SET IDENTITY_INSERT Desarrollador OFF
 
 --Instrucciones para agregar TITULOS DE VIDEOJUEGOS
@@ -1543,18 +1507,74 @@ INSERT INTO Titulo(Id, Nombre, Año, Version, PrecioActual, IdDesarrollador) VALU
 INSERT INTO Titulo(Id, Nombre, Año, Version, PrecioActual, IdDesarrollador) VALUES(2, 'Super Mario Bros.', 1985, '1', 40000, 2)
 INSERT INTO Titulo(Id, Nombre, Año, Version, PrecioActual, IdDesarrollador) VALUES(3, 'Persona 5: Royal', 2019, '1', 20000, 12);
 INSERT INTO Titulo(Id, Nombre, Año, Version, PrecioActual, IdDesarrollador) VALUES(4, 'Red Dead Redemption 2', 2018, '1', 20000, 8);
-INSERT INTO Titulo(Id, Nombre, Año, Version, PrecioActual, IdDesarrollador) VALUES(5, 'Half-Life: Alyx', 2020, '1', 15000, 14);
-INSERT INTO Titulo(Id, Nombre, Año, Version, PrecioActual, IdDesarrollador) VALUES(6, 'The Legend of Zelda: Breath of the Wild', 2017, '1', 20000, 15);
-INSERT INTO Titulo(Id, Nombre, Año, Version, PrecioActual, IdDesarrollador) VALUES(7, 'Super Mario Odyssey', 2017, '1', 20000, 15);
-INSERT INTO Titulo(Id, Nombre, Año, Version, PrecioActual, IdDesarrollador) VALUES(8, 'Super Smash Bros. Ultimate', 2018, '1', 20000, 15);
-INSERT INTO Titulo(Id, Nombre, Año, Version, PrecioActual, IdDesarrollador) VALUES(9, 'The Legend of Zelda: Ocarina of Time 3D', 2011, '1', 10000, 15);
-INSERT INTO Titulo(Id, Nombre, Año, Version, PrecioActual, IdDesarrollador) VALUES(10, 'Forza Horizon 4', 2018, '1', 15000, 17);
+INSERT INTO Titulo(Id, Nombre, Año, Version, PrecioActual, IdDesarrollador) VALUES(5, 'Half-Life: Alyx', 2020, '1', 15000, 13);
+INSERT INTO Titulo(Id, Nombre, Año, Version, PrecioActual, IdDesarrollador) VALUES(6, 'The Legend of Zelda: Breath of the Wild', 2017, '1', 20000, 14);
+INSERT INTO Titulo(Id, Nombre, Año, Version, PrecioActual, IdDesarrollador) VALUES(7, 'Super Mario Odyssey', 2017, '1', 20000, 14);
+INSERT INTO Titulo(Id, Nombre, Año, Version, PrecioActual, IdDesarrollador) VALUES(8, 'Super Smash Bros. Ultimate', 2018, '1', 20000, 14);
+INSERT INTO Titulo(Id, Nombre, Año, Version, PrecioActual, IdDesarrollador) VALUES(9, 'The Legend of Zelda: Ocarina of Time 3D', 2011, '1', 10000, 14);
+INSERT INTO Titulo(Id, Nombre, Año, Version, PrecioActual, IdDesarrollador) VALUES(10, 'Forza Horizon 4', 2018, '1', 15000, 16);
 INSERT INTO Titulo(Id, Nombre, Año, Version, PrecioActual, IdDesarrollador) VALUES(11, 'Persona 4 Golden', 2013, '1', 15000, 12);
-INSERT INTO Titulo(Id, Nombre, Año, Version, PrecioActual, IdDesarrollador) VALUES(12, 'The Last of Us Remasterizado', 2014, '1', 15000, 16);
+INSERT INTO Titulo(Id, Nombre, Año, Version, PrecioActual, IdDesarrollador) VALUES(12, 'The Last of Us Remasterizado', 2014, '1', 15000, 15);
+-- Capcom Co. Ltd.
+INSERT INTO Titulo(Id, Nombre, Año, Version, PrecioActual, IdDesarrollador) VALUES(13, 'Resident Evil 2', 2019, '1', 25000, 1);
+INSERT INTO Titulo(Id, Nombre, Año, Version, PrecioActual, IdDesarrollador) VALUES(14, 'Street Fighter V', 2016, '1', 18000, 1);
+INSERT INTO Titulo(Id, Nombre, Año, Version, PrecioActual, IdDesarrollador) VALUES(15, 'Monster Hunter: World', 2018, '1', 22000, 1);
+-- Nintendo Co., Ltd.
+INSERT INTO Titulo(Id, Nombre, Año, Version, PrecioActual, IdDesarrollador) VALUES(16, 'Pokémon Let''s Go, Pikachu!', 2018, '1', 20000, 2);
+INSERT INTO Titulo(Id, Nombre, Año, Version, PrecioActual, IdDesarrollador) VALUES(17, 'Kirby and the Forgotten Land', 2022, '1', 25000, 2);
+-- Konami Digital Entertainment
+INSERT INTO Titulo(Id, Nombre, Año, Version, PrecioActual, IdDesarrollador) VALUES(18, 'Metal Gear Solid V: The Phantom Pain', 2015, '1', 15000, 3);
+INSERT INTO Titulo(Id, Nombre, Año, Version, PrecioActual, IdDesarrollador) VALUES(19, 'Castlevania: Symphony of the Night', 1997, '1', 10000, 3);
+-- Square Enix Holdings Co., Ltd.
+INSERT INTO Titulo(Id, Nombre, Año, Version, PrecioActual, IdDesarrollador) VALUES(20, 'Final Fantasy VII Remake', 2020, '1', 25000, 4);
+INSERT INTO Titulo(Id, Nombre, Año, Version, PrecioActual, IdDesarrollador) VALUES(21, 'Kingdom Hearts III', 2019, '1', 20000, 4);
+INSERT INTO Titulo(Id, Nombre, Año, Version, PrecioActual, IdDesarrollador) VALUES(22, 'Dragon Quest XI: Echoes of an Elusive Age', 2017, '1', 20000, 4);
+-- Sega Corporation
+INSERT INTO Titulo(Id, Nombre, Año, Version, PrecioActual, IdDesarrollador) VALUES(23, 'Sonic Mania', 2017, '1', 15000, 5);
+INSERT INTO Titulo(Id, Nombre, Año, Version, PrecioActual, IdDesarrollador) VALUES(24, 'Yakuza 0', 2015, '1', 12000, 5);
+-- Bandai Namco Entertainment Inc.
+INSERT INTO Titulo(Id, Nombre, Año, Version, PrecioActual, IdDesarrollador) VALUES(25, 'Tekken 7', 2015, '1', 18000, 6);
+INSERT INTO Titulo(Id, Nombre, Año, Version, PrecioActual, IdDesarrollador) VALUES(26, 'Elden Ring', 2022, '1', 25000, 6);
+-- FromSoftware, Inc.
+INSERT INTO Titulo(Id, Nombre, Año, Version, PrecioActual, IdDesarrollador) VALUES(27, 'Bloodborne', 2015, '1', 18000, 7);
+INSERT INTO Titulo(Id, Nombre, Año, Version, PrecioActual, IdDesarrollador) VALUES(28, 'Sekiro: Shadows Die Twice', 2019, '1', 22000, 7);
+-- Rockstar Games
+INSERT INTO Titulo(Id, Nombre, Año, Version, PrecioActual, IdDesarrollador) VALUES(29, 'Grand Theft Auto V', 2013, '1', 20000, 8);
+-- Electronic Arts (EA)
+INSERT INTO Titulo(Id, Nombre, Año, Version, PrecioActual, IdDesarrollador) VALUES(30, 'The Sims 4', 2014, '1', 18000, 9);
+INSERT INTO Titulo(Id, Nombre, Año, Version, PrecioActual, IdDesarrollador) VALUES(31, 'FIFA 23', 2022, '1', 25000, 9);
+-- Blizzard Entertainment
+INSERT INTO Titulo(Id, Nombre, Año, Version, PrecioActual, IdDesarrollador) VALUES(32, 'Diablo IV', 2023, '1', 30000, 10);
+INSERT INTO Titulo(Id, Nombre, Año, Version, PrecioActual, IdDesarrollador) VALUES(33, 'Overwatch 2', 2022, '1', 0, 10);
+-- Ubisoft Entertainment
+INSERT INTO Titulo(Id, Nombre, Año, Version, PrecioActual, IdDesarrollador) VALUES(34, 'Assassin''s Creed Valhalla', 2020, '1', 20000, 11);
+INSERT INTO Titulo(Id, Nombre, Año, Version, PrecioActual, IdDesarrollador) VALUES(35, 'Far Cry 6', 2021, '1', 18000, 11);
+-- Atlus
+INSERT INTO Titulo(Id, Nombre, Año, Version, PrecioActual, IdDesarrollador) VALUES(36, 'Shin Megami Tensei V', 2021, '1', 20000, 12);
+INSERT INTO Titulo(Id, Nombre, Año, Version, PrecioActual, IdDesarrollador) VALUES(37, 'Persona 3 Reload', 2024, '1', 25000, 12);
+-- Valve Corporation
+INSERT INTO Titulo(Id, Nombre, Año, Version, PrecioActual, IdDesarrollador) VALUES(38, 'Portal 2', 2011, '1', 10000, 13);
+INSERT INTO Titulo(Id, Nombre, Año, Version, PrecioActual, IdDesarrollador) VALUES(39, 'Left 4 Dead 2', 2009, '1', 8000, 13);
+-- Nintendo EPD
+INSERT INTO Titulo(Id, Nombre, Año, Version, PrecioActual, IdDesarrollador) VALUES(40, 'Splatoon 3', 2022, '1', 20000, 14);
+INSERT INTO Titulo(Id, Nombre, Año, Version, PrecioActual, IdDesarrollador) VALUES(41, 'Mario Kart 8 Deluxe', 2017, '1', 20000, 14);
+INSERT INTO Titulo(Id, Nombre, Año, Version, PrecioActual, IdDesarrollador) VALUES(42, 'Animal Crossing: New Horizons', 2020, '1', 20000, 14);
+INSERT INTO Titulo(Id, Nombre, Año, Version, PrecioActual, IdDesarrollador) VALUES(43, 'Metroid Dread', 2021, '1', 18000, 14);
+-- Naughty Dog
+INSERT INTO Titulo(Id, Nombre, Año, Version, PrecioActual, IdDesarrollador) VALUES(44, 'Uncharted 4: A Thief''s End', 2016, '1', 15000, 15);
+-- Playground Games
+INSERT INTO Titulo(Id, Nombre, Año, Version, PrecioActual, IdDesarrollador) VALUES(45, 'Forza Horizon 5', 2021, '1', 20000, 16);
+-- Otros títulos de desarrolladores existentes
+INSERT INTO Titulo(Id, Nombre, Año, Version, PrecioActual, IdDesarrollador) VALUES(46, 'Street Fighter 6', 2023, '1', 25000, 1);
+INSERT INTO Titulo(Id, Nombre, Año, Version, PrecioActual, IdDesarrollador) VALUES(47, 'Resident Evil 4', 2023, '1', 25000, 1);
+INSERT INTO Titulo(Id, Nombre, Año, Version, PrecioActual, IdDesarrollador) VALUES(48, 'Super Mario Wonder', 2023, '1', 20000, 14);
+INSERT INTO Titulo(Id, Nombre, Año, Version, PrecioActual, IdDesarrollador) VALUES(49, 'The Legend of Zelda: Tears of the Kingdom', 2023, '1', 25000, 14);
+INSERT INTO Titulo(Id, Nombre, Año, Version, PrecioActual, IdDesarrollador) VALUES(50, 'Diablo II Resurrected', 2021, '1', 20000, 10);
 SET IDENTITY_INSERT Titulo OFF
 
 --Instrucciones para agregar CATEGORIA de los TITULOS DE VIDEOJUEGOS
-INSERT INTO TituloCategoria(IdTitulo, IdCategoria) VALUES(2, 1)
+INSERT INTO TituloCategoria(IdTitulo, IdCategoria) VALUES(1, 1)
+INSERT INTO TituloCategoria(IdTitulo, IdCategoria) VALUES(2, 3)
 
 SET IDENTITY_INSERT Cliente ON
 INSERT INTO Cliente(Id, NumeroIdentificacion, IdTipoDocumento, Nombre, Direccion, Movil, IdCiudad, Correo) VALUES (1, '72117071', 13, 'OSORIO ZULUAGA ADOLFO LEON', 'CALE 35D 89 / 88', '2105820',5001, 'cancan_123@gmail.com ');
@@ -1882,4 +1902,214 @@ INSERT INTO Venta (Id, NumeroFactura, Fecha, IdCliente, IdEmpleado, IdEstado) VA
 INSERT INTO Venta (Id, NumeroFactura, Fecha, IdCliente, IdEmpleado, IdEstado) VALUES (204, 204, '2025-03-04', 42, 1, 1);
 INSERT INTO Venta (Id, NumeroFactura, Fecha, IdCliente, IdEmpleado, IdEstado) VALUES (205, 205, '2025-03-04', 63, 1, 1);
 SET IDENTITY_INSERT Venta OFF
+
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(1, 12, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(2, 13, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(3, 29, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(4, 2, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(5, 17, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(6, 35, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(7, 3, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(8, 24, 1, 10000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(9, 19, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(10, 34, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(11, 33, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(12, 28, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(13, 40, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(14, 10, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(15, 1, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(16, 5, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(17, 32, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(18, 38, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(19, 7, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(20, 14, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(21, 26, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(22, 37, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(23, 11, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(24, 18, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(25, 34, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(26, 22, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(27, 28, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(28, 10, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(29, 40, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(30, 7, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(31, 19, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(32, 38, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(33, 27, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(34, 31, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(35, 3, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(36, 4, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(37, 6, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(38, 29, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(39, 17, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(40, 4, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(41, 18, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(42, 11, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(43, 35, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(44, 2, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(45, 13, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(46, 32, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(47, 14, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(48, 20, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(49, 38, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(50, 22, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(51, 5, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(52, 37, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(53, 9, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(54, 34, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(55, 28, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(56, 8, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(57, 33, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(58, 25, 1, 10000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(59, 36, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(60, 24, 1, 10000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(61, 30, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(62, 32, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(63, 3, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(64, 7, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(65, 2, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(66, 19, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(67, 30, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(68, 4, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(69, 26, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(70, 29, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(71, 40, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(72, 17, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(73, 38, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(74, 14, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(75, 39, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(76, 16, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(77, 12, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(78, 21, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(79, 37, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(80, 27, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(81, 18, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(82, 20, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(83, 9, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(84, 32, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(85, 33, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(86, 36, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(87, 17, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(88, 1, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(89, 7, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(90, 21, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(91, 34, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(92, 13, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(93, 31, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(94, 18, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(95, 16, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(96, 35, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(97, 11, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(98, 8, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(99, 12, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(100, 29, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(101, 30, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(102, 13, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(103, 32, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(104, 38, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(105, 5, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(106, 40, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(107, 10, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(108, 35, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(109, 3, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(110, 16, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(111, 4, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(112, 36, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(113, 34, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(114, 18, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(115, 20, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(116, 14, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(117, 17, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(118, 28, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(119, 1, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(120, 31, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(121, 33, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(122, 16, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(123, 30, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(124, 6, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(125, 11, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(126, 14, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(127, 19, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(128, 23, 1, 10000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(129, 15, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(130, 3, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(131, 22, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(132, 34, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(133, 17, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(134, 33, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(135, 1, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(136, 12, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(137, 13, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(138, 29, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(139, 27, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(140, 39, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(141, 30, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(142, 36, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(143, 40, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(144, 21, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(145, 32, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(146, 3, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(147, 19, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(148, 24, 1, 10000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(149, 22, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(150, 1, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(151, 2, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(152, 17, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(153, 14, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(154, 37, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(155, 7, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(156, 10, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(157, 20, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(158, 9, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(159, 27, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(160, 39, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(161, 12, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(162, 23, 1, 10000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(163, 13, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(164, 31, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(165, 32, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(166, 29, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(167, 28, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(168, 33, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(169, 8, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(170, 38, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(171, 36, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(172, 15, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(173, 23, 1, 10000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(174, 6, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(175, 3, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(176, 8, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(177, 16, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(178, 26, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(179, 14, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(180, 5, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(181, 30, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(182, 18, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(183, 4, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(184, 35, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(185, 32, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(186, 19, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(187, 14, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(188, 25, 1, 10000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(189, 37, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(190, 13, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(191, 28, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(192, 31, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(193, 11, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(194, 17, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(195, 39, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(196, 27, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(197, 7, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(198, 29, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(199, 9, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(200, 2, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(201, 33, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(202, 35, 1, 15000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(203, 10, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(204, 22, 1, 20000, 0);
+INSERT INTO VentaDetalle (IdVenta, IdTitulo, Cantidad, Precio, Descuento) VALUES(205, 3, 1, 20000, 0);
+
+
+
+
 

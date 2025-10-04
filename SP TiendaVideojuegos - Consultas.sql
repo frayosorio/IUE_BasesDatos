@@ -4,3 +4,7 @@ SELECT DISTINCT C.Id, C.Nombre
 		JOIN Venta V ON C.Id=V.IdCliente
 
 EXEC spHistorialComprasCliente 31
+
+EXEC spReporteVentasClientes
+
+EXEC spReporteVentasClientes 31

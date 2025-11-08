@@ -5,31 +5,37 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "Pais")
-public class Pais {
+@Table(name = "Campeonato")
+public class Campeonato {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "Id")
+    @Column(name="Id")
     private int id;
 
-    @Column(name = "Pais", length=100, unique=true)
+    @Column(name="Campeonato")
     private String nombre;
 
-    @Column(name = "Entidad")
-    private String entidad;
+    @Column(name="Año")
+    private int año;
 
-   
-    public Pais() {
+    @ManyToOne
+    @JoinColumn(name = "IdPais", referencedColumnName = "Id")
+    private Pais pais;
+
+    public Campeonato() {
     }
 
-    public Pais(int id, String nombre, String entidad) {
+    public Campeonato(int id, String nombre, int año, Pais pais) {
         this.id = id;
         this.nombre = nombre;
-        this.entidad = entidad;
+        this.año = año;
+        this.pais = pais;
     }
 
     public int getId() {
@@ -48,13 +54,22 @@ public class Pais {
         this.nombre = nombre;
     }
 
-    public String getEntidad() {
-        return entidad;
+    public int getAño() {
+        return año;
     }
 
-    public void setEntidad(String entidad) {
-        this.entidad = entidad;
+    public void setAño(int año) {
+        this.año = año;
+    }
+
+    public Pais getPais() {
+        return pais;
+    }
+
+    public void setPais(Pais pais) {
+        this.pais = pais;
     }
 
     
+
 }

@@ -8,28 +8,23 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "Pais")
-public class Pais {
+@Table(name = "Fase")
+public class Fase {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "Id")
     private int id;
 
-    @Column(name = "Pais", length=100, unique=true)
+    @Column(name = "Fase", unique = true, nullable = false)
     private String nombre;
 
-    @Column(name = "Entidad")
-    private String entidad;
-
-   
-    public Pais() {
+    public Fase() {
     }
 
-    public Pais(int id, String nombre, String entidad) {
+    public Fase(int id, String nombre) {
         this.id = id;
         this.nombre = nombre;
-        this.entidad = entidad;
     }
 
     public int getId() {
@@ -48,13 +43,4 @@ public class Pais {
         this.nombre = nombre;
     }
 
-    public String getEntidad() {
-        return entidad;
-    }
-
-    public void setEntidad(String entidad) {
-        this.entidad = entidad;
-    }
-
-    
 }

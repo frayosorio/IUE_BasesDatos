@@ -22,7 +22,7 @@ public class Grupo {
     private String nombre;
 
     @ManyToOne
-    @JoinColumn(name = "IdCampeonato", referencedColumnName = "Id", nullable = false)
+    @JoinColumn(name = "idcampeonato", referencedColumnName = "Id", nullable = false)
     private Campeonato campeonato;
 
     public Grupo() {

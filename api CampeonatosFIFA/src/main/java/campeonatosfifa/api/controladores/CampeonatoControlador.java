@@ -9,31 +9,32 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import campeonatosfifa.api.dominio.Pais;
-import campeonatosfifa.api.repositorios.PaisRepositorio;
+import campeonatosfifa.api.dominio.Campeonato;
+import campeonatosfifa.api.repositorios.CampeonatoRepositorio;
 
 @RestController
-@RequestMapping("/api/paises")
-public class PaisControlador {
+@RequestMapping("/api/campeonatos")
+public class CampeonatoControlador {
+
 
     @Autowired
-    private PaisRepositorio repositorio;
+    private CampeonatoRepositorio repositorio;
 
     @RequestMapping(value = "/listar", method = RequestMethod.GET)
-    public List<Pais> listar() {
+    public List<Campeonato> listar() {
         return repositorio.findAll();
     }
 
     @RequestMapping(value = "/agregar", method = RequestMethod.POST)
-    public Pais agregar(@RequestBody Pais pais) {
-        pais.setId(0);
-        return repositorio.save(pais);
+    public Campeonato agregar(@RequestBody Campeonato campeonato) {
+        campeonato.setId(0);
+        return repositorio.save(campeonato);
     }
 
     @RequestMapping(value = "/modificar", method = RequestMethod.PUT)
-    public Pais modificar(@RequestBody Pais pais) {
-        if (repositorio.findById(pais.getId()).isPresent()) {
-            return repositorio.save(pais);
+    public Campeonato modificar(@RequestBody Campeonato campeonato) {
+        if (repositorio.findById(campeonato.getId()).isPresent()) {
+            return repositorio.save(campeonato);
         } else {
             return null;
         }
@@ -48,4 +49,5 @@ public class PaisControlador {
             return false;
         }
     }
+
 }

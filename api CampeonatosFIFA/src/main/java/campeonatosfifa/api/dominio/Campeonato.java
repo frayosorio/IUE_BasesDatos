@@ -25,7 +25,7 @@ public class Campeonato {
     private int año;
 
     @ManyToOne
-    @JoinColumn(name = "IdPais", referencedColumnName = "Id")
+    @JoinColumn(name = "idpais", referencedColumnName = "Id")
     private Pais pais;
 
     public Campeonato() {
